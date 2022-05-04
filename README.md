@@ -1,4 +1,4 @@
-# FunctionPlotter_Task03
+# FunctionPlotter_Task01
 
 ## Overview
 An application that plot functions created using Qt Creator and C++.
