@@ -22,13 +22,21 @@ An application that plot functions created using Qt Creator and C++.
 ##### Validation Step:
 It make sure the range values are numbers (integer/decimal) and they are not equal, otherwise it displays error message. After that it make sure that the syntax is correct. Look at the following cases of two adjacent characters:
 > Number - Number : Considered as one number of two digit. (eg. "25")
+
 > Number - x (variable) : Invalid syntax. (eg. "2x")
+
 > Number - Operator : Valid syntax. (eg. "2+")
+
 > x (variable) - Number : Invalid syntax. (eg. "x2")
+
 > x (variable) - x (variable) : Invalid syntax. (eg. "xx")
+
 > x (variable) - Operator : Valid syntax. (eg. "x-")
+
 > Operator - Number : Valid syntax. (eg. "-5")
+
 > Operator - x (variable) : Valid syntax. (eg. "/x")
+
 > Operator - Operator : Invalid syntax. (eg. "*/")
 
 After that it checks the last character. If it is an operator it will display the error message.
@@ -116,7 +124,7 @@ bool MainWindow::validateExpression(const char * expressionString, size_t len)
 }
 ```
 ##### Parsing Step:
-After validation, it will make and object of ==**ExpressionParser**== class. The object parse the string and save it as a vector of nodes.  Each node contains a type (constant, var, add, subtract, ...) and a value. The value represent the double-type number. This make the parsing operation to be done only one time.
+After validation, it will make and object of **ExpressionParser** class. The object parse the string and save it as a vector of nodes.  Each node contains a type (constant, var, add, subtract, ...) and a value. The value represent the double-type number. This make the parsing operation to be done only one time.
 
 ```cpp
     // Enum that represent the type of the node (variable, constant, operation)
@@ -132,7 +140,7 @@ After validation, it will make and object of ==**ExpressionParser**== class. The
     std::vector<Node> parsedExpressionVector;
 ```
 ##### Generate a vector of points and plot it:
-After that The range of x is devided into a vector of points. For each of these points we must calculate the corresponding y value. Here we can see the advantage of using the **Node** structure. We will perform the calculations many times. And it will help us to aviod reparsing the string again and again. Also we can find the value of the constants in ==**double value;**== member of the structure.
+After that The range of x is devided into a vector of points. For each of these points we must calculate the corresponding y value. Here we can see the advantage of using the **Node** structure. We will perform the calculations many times. And it will help us to aviod reparsing the string again and again. Also we can find the value of the constants in **double value;** member of the structure.
 
 Now, We can plot the points easily. 🙂
 
@@ -165,6 +173,7 @@ Example
 ![Dependencies](images/autoNumberOfPoints.png)
 
 Window is resizable
+
 ![Dependencies](images/smallSize.png)
 
 The effect of changing the number of points
