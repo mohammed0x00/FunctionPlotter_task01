@@ -31,7 +31,7 @@ private:
     Ui::MainWindow *ui;
 
     // Enum that represent the type of the errors (invalidRanges, syntaxError)
-    typedef enum Error_Type_enum {invalidRanges, syntaxError} Error_Type;
+    enum Error_Type {invalidRanges, syntaxError};
 
     bool validateExpression(const char * expressionString, size_t len);
     void plot(ExpressionParser * ex, double minValue, double maxValue, int numberOfPoints);
