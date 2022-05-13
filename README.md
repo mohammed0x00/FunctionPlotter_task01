@@ -3,6 +3,12 @@
 ## Overview
 An application that plot functions created using Qt Creator and C++.
 
+![Dependencies](images/smallSize.png)
+
+## How to use
+Simply after running the executable file you should write the function in the function field and write the ranges of input then press (Plot).
+> Note : you must use the operators mentioned above. Don't forget to add * operator between number and variable (eg. 3*x).
+
 ## Features
 - Support Basic Operations + - * / ^.
 - Support decimal numbers.
@@ -146,11 +152,6 @@ Now, We can plot the points easily. 🙂
 
 ## Executable File Dependencies
 ![Dependencies](images/shared_libs.png)
-
-
-## How to use
-Simply after running the executable file you should write the function in the function field and write the ranges of input then press (Plot).
-> Note : you must use the operators mentioned above. Don't forget to add * operator between number and variable (eg. 3*x).
 
 ## Project Files
 > ### Source Files
