@@ -3,6 +3,25 @@
 ## Overview
 An application that plot functions created using Qt Creator and C++.
 
+![Dependencies](images/smallSize.png)
+
+## Getting started
+- Download Qt Creator from https://www.qt.io/download
+- Download project files
+```console
+git clone https://github.com/mohammed0x00/FunctionPlotter_task01.git
+```
+- You can run the pre-compiled executable by executing the following commands
+```console
+cd FunctionPlotter_task01
+./FunctionPlotter_task01
+```
+- Or you can run Qt Creator and import the project file **FunctionPlotter_task01.pro**
+
+## How to use
+Simply after running the executable file you should write the function in the function field and write the ranges of input then press (Plot).
+> Note : you must use the operators mentioned above. Don't forget to add * operator between number and variable (eg. 3*x).
+
 ## Features
 - Support Basic Operations + - * / ^.
 - Support decimal numbers.
@@ -11,6 +30,7 @@ An application that plot functions created using Qt Creator and C++.
 - Flexible window
 - Parentheses are not supported yet.
 - Trigonometric functions also are not supported.
+- Automatic testing using QtTest
 
 ## General Info.
 - C++ language.
@@ -167,6 +187,10 @@ Simply after running the executable file you should write the function in the fu
 > - mainwindow.ui
 
 ## Testing & Screenshots
+
+### Automatic Testing
+![testResult](images/testResult.png)
+
 ### Some valid examples:
 Example
 ![example](images/example1.png)
